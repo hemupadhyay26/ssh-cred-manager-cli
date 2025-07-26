@@ -13,7 +13,7 @@ require (
 	github.com/muesli/roff v0.1.0
 	github.com/spf13/cobra v1.8.0
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616
-	golang.org/x/term v0.20.0
+	golang.org/x/term v0.33.0
 	golang.org/x/tools v0.35.0
 	mvdan.cc/gofumpt v0.6.0
 )
