@@ -9,7 +9,7 @@ import (
 func newVersionCmd(version string) *cobra.Command {
 	return &cobra.Command{
 		Use:          "version",
-		Short:        "ssh-cred-manager-cli version",
+		Short:        "ssh-cli version",
 		Args:         cobra.NoArgs,
 		SilenceUsage: true,
 		Aliases:      []string{"v"},

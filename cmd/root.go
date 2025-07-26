@@ -18,6 +18,8 @@ func newRootCmd(version string) *cobra.Command {
 
 	cmd.AddCommand(newVersionCmd(version)) // version subcommand
 	cmd.AddCommand(ssh.NewSSHCmd())
+	// Register the man command
+	cmd.AddCommand(NewManCmd().Cmd)
 
 	return cmd
 }
