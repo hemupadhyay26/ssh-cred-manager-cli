@@ -8,8 +8,8 @@ import (
 
 func newRootCmd(version string) *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "ssh-cred-manager-cli",
-		Short: "golang-cli project template demo application",
+		Use:   "ssh-cli",
+		Short: "cli tool help you to ssh management",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return cmd.Help()
 		},
