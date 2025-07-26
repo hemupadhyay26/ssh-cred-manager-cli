@@ -7,7 +7,7 @@ import (
 	"github.com/hemupadhyay26/ssh-cred-manager-cli/cmd"
 )
 
-var version = ""
+var version = "v1.0"
 
 func main() {
 	if err := cmd.Execute(version); err != nil {

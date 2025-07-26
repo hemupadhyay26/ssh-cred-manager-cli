@@ -13,7 +13,7 @@ func newVersionCmd(version string) *cobra.Command {
 		Args:         cobra.NoArgs,
 		SilenceUsage: true,
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Fprintf(cmd.OutOrStdout(), "ssh-cred-manager-cli: %s\n", version)
+			fmt.Fprintf(cmd.OutOrStdout(), "ssh-cli: %s\n", version)
 		},
 	}
 }

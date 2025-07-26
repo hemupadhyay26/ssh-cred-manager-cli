@@ -22,5 +22,5 @@ func TestVersionCommand(t *testing.T) {
 	out, err := io.ReadAll(b)
 	require.NoError(t, err)
 
-	assert.Equal(t, fmt.Sprintf("ssh-cred-manager-cli: %s\n", version), string(out))
+	assert.Equal(t, fmt.Sprintf("ssh-cli: %s\n", version), string(out))
 }

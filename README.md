@@ -62,30 +62,30 @@ Repository  -> Settings -> Secrets & variables -> `CODECOV_TOKEN`, `DOCKERHUB_TO
 # Demo Application
 
 ```sh
-$> ssh-cred-manager-cli -h
-golang-cli project template demo application
+$> ssh-cli -h
+cli tool help you to ssh management
 
 Usage:
-  ssh-cred-manager-cli [flags]
-  ssh-cred-manager-cli [command]
+  ssh-cli [flags]
+  ssh-cli [command]
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell
   example     example subcommand which adds or multiplies two given integers
   help        Help about any command
-  version     ssh-cred-manager-cli version
+  version     ssh-cli version
 
 Flags:
-  -h, --help   help for ssh-cred-manager-cli
+  -h, --help   help for ssh-cli
 
-Use "ssh-cred-manager-cli [command] --help" for more information about a command.
+Use "ssh-cli [command] --help" for more information about a command.
 ```
 
 ```sh
-$> ssh-cred-manager-cli example 2 5 --add
+$> ssh-cli example 2 5 --add
 7
 
-$> ssh-cred-manager-cli example 2 5 --multiply
+$> ssh-cli example 2 5 --multiply
 10
 ```
 

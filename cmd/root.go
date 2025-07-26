@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/hemupadhyay26/ssh-cred-manager-cli/cmd/ssh"
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +17,7 @@ func newRootCmd(version string) *cobra.Command {
 	}
 
 	cmd.AddCommand(newVersionCmd(version)) // version subcommand
-	cmd.AddCommand(newExampleCmd())        // example subcommand
+	cmd.AddCommand(ssh.NewSSHCmd())
 
 	return cmd
 }
