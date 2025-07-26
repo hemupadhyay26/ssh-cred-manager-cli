@@ -1,4 +1,4 @@
-projectname?=ssh-cred-manager-cli
+projectname?=ssh-cli
 
 default: help
 

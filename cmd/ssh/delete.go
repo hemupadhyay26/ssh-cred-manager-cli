@@ -133,9 +133,10 @@ func handleMultipleDelete(store *credential.CredentialStore, creds []credential.
 
 func NewDeleteCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "delete [name]",
-		Short: "Delete saved SSH credential(s)",
-		Args:  cobra.MaximumNArgs(1),
+		Use:     "delete [name]",
+		Short:   "Delete saved SSH credential(s)",
+		Aliases: []string{"del", "rm", "d"},
+		Args:    cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			store, err := credential.NewCredentialStore()
 			if err != nil {

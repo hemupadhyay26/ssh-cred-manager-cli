@@ -1,4 +1,4 @@
-ssh-cred-manager-cli
+ssh-cli
 vendor/
 coverage.out
 /dist

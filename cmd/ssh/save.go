@@ -80,18 +80,22 @@ func NewSaveCmd() *cobra.Command {
 	)
 
 	cmd := &cobra.Command{
-		Use:   "save",
-		Short: "Save new SSH credentials",
+		Use:     "save",
+		Short:   "Save new SSH credentials",
+		Aliases: []string{"s", "add", "a"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			store, err := credential.NewCredentialStore()
 			if err != nil {
 				return fmt.Errorf("failed to initialize credential store: %w", err)
 			}
 
+			println("Add new SSH credential")
 			// Interactive prompts for missing required fields
 			if name == "" {
 				for {
 					name = promptForInput("Enter connection name")
+					name = strings.ToLower(strings.TrimSpace(name)) // Normalize here
+
 					if name == "" {
 						fmt.Println("Name cannot be empty. Try again.")
 						continue
@@ -100,12 +104,15 @@ func NewSaveCmd() *cobra.Command {
 						break
 					}
 					name = promptForNewName(store, name)
+					name = strings.ToLower(strings.TrimSpace(name)) // Normalize again after prompt
 					break
 				}
 			} else {
 				// Check if name from flag already exists
+				name = strings.ToLower(strings.TrimSpace(name)) // Normalize here
 				if cred, _ := store.GetCredential(name); cred != nil {
 					name = promptForNewName(store, name)
+					name = strings.ToLower(strings.TrimSpace(name)) // Normalize again after prompt
 				}
 			}
 
