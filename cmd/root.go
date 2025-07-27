@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/hemupadhyay26/ssh-cred-manager-cli/cmd/ssh"
+	"github.com/hemupadhyay26/ssh-cred-manager-cli/cmd/tui"
 	"github.com/spf13/cobra"
 )
 
@@ -18,6 +19,7 @@ func newRootCmd(version string) *cobra.Command {
 
 	cmd.AddCommand(newVersionCmd(version)) // version subcommand
 	cmd.AddCommand(ssh.NewSSHCmd())
+	cmd.AddCommand(tui.NewTuiCmd())
 	// Register the man command
 	cmd.AddCommand(NewManCmd().Cmd)
 
